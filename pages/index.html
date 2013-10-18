@@ -26,14 +26,23 @@
 		<!-- vim like editing -->
 		<script src="/src/cm/keymap/vim.js"></script>
 		
-		
+		<style>
+		  .CodeMirror {
+		    position:absolute;
+		    top:45px;
+		    bottom:0;
+		    width:100%;
+		    height:100% !important;
+		    overflow-x:hidden;
+		  }
+		</style>
 		<!-- END CODEMIRROR -->
 		<script src="/src/cmds-cli.js"></script><!-- cmds -->
   </head>
   <body>
 		<div id="menu" class="fixed top-bar" style="position:fixed !important;">
-			<div class="right"><a href="/view?{{ viewUUID }}">{{ viewUUID }}</a></div>
+			<div class="right"><span id="viewID"></span></div>
 		</div>
-		<textarea id="code" class="code" style="width:100%;height:100%;"></textarea>
+		<textarea id="code" class="code" style="width:100%;position:absolute;top:45px;bottom:0px;"></textarea>
   </body>
 </html>

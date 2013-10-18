@@ -6,7 +6,7 @@ swig   = require 'swig'
 server = http.createServer(app)
 uuid   = require 'node-uuid'
 
-app.settings['x-powered-by']=false
+#app.settings['x-powered-by']=false
 app.engine 'html', swig.renderFile
 app.set 'view engine', 'html'
 app.set 'views', __dirname + '/pages'
@@ -19,11 +19,11 @@ app.get '/', (req,res)->
 app.get '/view', (req,res)->
   res.render 'view', {}
 
-app.get '/src/:filename', (req,res)->
+app.get '/src/*', (req,res)->
   try
-    res.sendfile __dirname+'/src/'+req.params.filename
-  catch e
-    res.send ''
+    res.sendfile __dirname+'/src/'+req.params[0]
+  catch error
+    res.send '...'
 
 io = require('socket.io').listen(server)
 
@@ -51,7 +51,7 @@ io.of('/cmds')
   socket.on 'index', (data,fn)-> #index
     console.log 'creator connected'
     socket.join(socket.id)
-    fn('ok')
+    fn(socket.id)
   
   socket.on 'view', (data,fn)-> #view
     console.log 'listener connected'

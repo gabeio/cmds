@@ -21,6 +21,11 @@
     setTimeout(try2(), 5000);
     page = window.location.pathname;
     if (page === "/") {
+      s.emit('index', {}, function(data) {
+        var viewID;
+        viewID = data;
+        return $('#viewID').html = data;
+      });
       return editor.on("change", function() {
         return s.emit('update', {
           code: editor.getValue()

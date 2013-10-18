@@ -13,6 +13,10 @@ window.onload=->
   setTimeout(try2(),5000)
   page=window.location.pathname
   if page=="/"
+    
+    s.emit 'index',{},(data)->
+      viewID=data
+      $('#viewID').innerHTML=data
     editor.on "change", ()->
       s.emit 'update',{code:editor.getValue()}
   else if page=="/view"
