@@ -51,7 +51,8 @@ io.configure 'development', ()->
 
 broadcast=(sio,data)->
   console.log 'sio:',sio if debug
-  sio.emit('update',data)
+  try
+    sio.emit('update',data)
 
 sessions={}
 
