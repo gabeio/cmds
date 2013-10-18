@@ -5,18 +5,23 @@
   root = typeof exports !== "undefined" && exports !== null ? exports : this;
 
   window.onload = function() {
-    var editor, page, s, try2;
+    var debug, editor, page, s, try2;
+    root.debug = debug = false;
     try {
       s = io.connect('http://' + window.location.hostname + '/cmds');
     } catch (error) {
-      console.log(error);
+      if (debug) {
+        console.log(error);
+      }
     }
     try2 = function() {
       if (typeof s !== 'undefined' && s.socket.connected !== true) {
         try {
           return root.s = s = io.connect('ws://' + window.location.hostname + '/cmds');
         } catch (error) {
-          return console.log(error);
+          if (debug) {
+            return console.log(error);
+          }
         }
       }
     };
@@ -29,14 +34,26 @@
         lineNumbers: true,
         tabMode: "indent",
         matchBrackets: true,
+        extraKeys: {
+          "F11": function(cm) {
+            if (cm.getOption("fullScreen")) {
+              return cm.setOption("fullScreen", false);
+            } else {
+              return cm.setOption("fullScreen", true);
+            }
+          }
+        },
         theme: 'monokai'
       });
       editor.focus();
       s.emit('index', {}, function(data) {
         var viewID;
-        console.log(data);
+        if (debug) {
+          console.log(data);
+        }
         root.vid = viewID = data;
-        return $('#viewID')[0].innerHTML = data;
+        $('#viewID')[0].innerHTML = data;
+        return $('#viewLINK')[0].href = '/view?v=' + data;
       });
       return editor.on("change", function() {
         return s.emit('update', {
@@ -52,12 +69,17 @@
           sid: $('#vid').val()
         }, function(data) {
           $('body').html('connected.');
-          return console.log(data);
+          if (debug) {
+            console.log(data);
+          }
+          return $('.begin').remove();
         });
       });
       return s.on('update', function(data) {
         $('body').html(data.code);
-        return console.log(data.code);
+        if (debug) {
+          return console.log(data.code);
+        }
       });
     }
   };

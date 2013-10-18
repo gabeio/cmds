@@ -28,6 +28,8 @@ app.get '/src/*', (req,res)->
 debug = false
 sessions={}
 
+console.log 'debug mode on' if debug
+
 io = require('socket.io').listen(server)
 
 io.configure 'development', ()->
