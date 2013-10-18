@@ -17,13 +17,15 @@ app.get '/', (req,res)->
   res.render 'index', {}
 
 app.get '/view', (req,res)->
-  res.render 'view', {}
+  res.render 'view', {vid:req.query.v}
 
 app.get '/src/*', (req,res)->
   try
     res.sendfile __dirname+'/src/'+req.params[0]
   catch error
     res.send '...'
+
+sessions={}
 
 io = require('socket.io').listen(server)
 
@@ -49,18 +51,26 @@ io.of('/cmds')
   console.log socket.id
   
   socket.on 'index', (data,fn)-> #index
-    console.log 'creator connected'
-    socket.join(socket.id)
-    fn(socket.id)
+    socket.set 'session', uuid.v4()
+    socket.get 'session', (e,d)->
+      socket.join(d)
+      fn(d)
+      console.log 'creator connected::',d
   
   socket.on 'view', (data,fn)-> #view
-    console.log 'listener connected'
+    socket.set 'session', data['sid']
     socket.join(data['sid'])
     fn('ok')
+    console.log 'listener connected::',data['sid']
   
   socket.on 'update', (data,fn)-> #index
     try
-      socket.broadcast.to(socket.id).emit('update',data)
+      socket.get 'session',(e,d)->
+        socket.broadcast.to(d).emit('update',data)
+      #console.log data
     fn('ok')
+.on 'disconnect', (socket)->
+  socket.get 'session', (e,d)->
+    socket.leave(d)
 
 server.listen(process.argv[2])

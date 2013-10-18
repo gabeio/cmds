@@ -2,38 +2,62 @@
 (function() {
   var root;
 
-  root = typeof exports === "function" ? exports(this) : void 0;
+  root = typeof exports !== "undefined" && exports !== null ? exports : this;
 
   window.onload = function() {
-    var editor, page, s, try2, url;
-    editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-      mode: "html",
-      lineNumbers: true,
-      tabMode: "indent"
-    });
-    url = window.location.protocol + '//' + window.location.hostname + '/cmds';
-    root.s = s = io.connect(url);
+    var editor, page, s, try2;
+    try {
+      s = io.connect('http://' + window.location.hostname + '/cmds');
+    } catch (error) {
+      console.log(error);
+    }
     try2 = function() {
       if (typeof s !== 'undefined' && s.socket.connected !== true) {
-        return root.s = s = io.connect('ws://' + window.location.hostname + '/cmds');
+        try {
+          return root.s = s = io.connect('ws://' + window.location.hostname + '/cmds');
+        } catch (error) {
+          return console.log(error);
+        }
       }
     };
-    setTimeout(try2(), 5000);
+    setTimeout(try2(), 1000);
     page = window.location.pathname;
     if (page === "/") {
+      editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        mode: "htmlmixed",
+        vimMode: true,
+        lineNumbers: true,
+        tabMode: "indent",
+        matchBrackets: true,
+        theme: 'monokai'
+      });
+      editor.focus();
       s.emit('index', {}, function(data) {
         var viewID;
-        viewID = data;
-        return $('#viewID').html = data;
+        console.log(data);
+        root.vid = viewID = data;
+        return $('#viewID')[0].innerHTML = data;
       });
       return editor.on("change", function() {
         return s.emit('update', {
           code: editor.getValue()
+        }, function(data) {
+          return data = null;
         });
       });
     } else if (page === "/view") {
+      $('#view').on('submit', function(e) {
+        e.preventDefault();
+        return s.emit('view', {
+          sid: $('#vid').val()
+        }, function(data) {
+          $('body').html('connected.');
+          return console.log(data);
+        });
+      });
       return s.on('update', function(data) {
-        return $('body').html = data.code;
+        $('body').html(data.code);
+        return console.log(data.code);
       });
     }
   };
