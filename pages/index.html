@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="pragma" content="no-cache" />
+		
+		<title>Dual Screen</title>
+		
+    <link rel="stylesheet" href="/src/f.css"><!-- foundation.css -->
+    <link rel="stylesheet" href="/src/n.css"><!-- normalize.css -->
+    <script src="/src/jq.js"></script><!-- jquery -->
+		<script src="/src/f.js"></script><!-- foundation -->
+		<script src="/src/sio.js"></script><!-- socket.io -->
+		<script src="/src/ld.js"></script><!-- lodash -->
+		<!-- START CODEMIRROR -->
+		
+		<!-- codemirror -->
+		<script src="/src/cm/lib/codemirror.js"></script>
+		<!-- codemirror -->
+		<link rel="stylesheet" href="/src/cm/lib/codemirror.css">
+		<!-- monokai theme -->
+		<link rel="stylesheet" href="/src/cm/theme/monokai.css">
+		<!-- vim like editing -->
+		<script src="/src/cm/keymap/vim.js"></script>
+		
+		
+		<!-- END CODEMIRROR -->
+		<script src="/src/cmds-cli.js"></script><!-- cmds -->
+  </head>
+  <body>
+		<div id="menu" class="fixed top-bar" style="position:fixed !important;">
+			<div class="right"><a href="/view?{{ viewUUID }}">{{ viewUUID }}</a></div>
+		</div>
+		<textarea id="code" class="code" style="width:100%;height:100%;"></textarea>
+  </body>
+</html>
