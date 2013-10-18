@@ -25,6 +25,7 @@ app.get '/src/*', (req,res)->
   catch error
     res.send '...'
 
+debug = false
 sessions={}
 
 io = require('socket.io').listen(server)
@@ -46,31 +47,37 @@ io.configure 'development', ()->
   , 'jsonp-polling'
   ]
 
+broadcast=(sio,data)->
+  console.log 'sio:',sio if debug
+  sio.emit('update',data)
+
+sessions={}
+
 io.of('/cmds')
 .on 'connection', (socket)->
-  console.log socket.id
+  console.log socket.id if debug
   
   socket.on 'index', (data,fn)-> #index
     socket.set 'session', uuid.v4()
     socket.get 'session', (e,d)->
-      socket.join(d)
+      sessions[d]=[socket]
       fn(d)
-      console.log 'creator connected::',d
+      console.log 'editer connected::',d if debug
   
   socket.on 'view', (data,fn)-> #view
-    socket.set 'session', data['sid']
-    socket.join(data['sid'])
+    socket.set 'session', data.sid
+    sessions[data.sid].push(socket)
     fn('ok')
-    console.log 'listener connected::',data['sid']
+    console.log 'viewer connected::',data.sid if debug
   
   socket.on 'update', (data,fn)-> #index
+    console.log 'sessions:',sessions
     try
-      socket.get 'session',(e,d)->
-        socket.broadcast.to(d).emit('update',data)
-      #console.log data
+      socket.get 'session', (e,d)->
+        console.log 'data:',data if debug
+        broadcast(sio,data) for sio in sessions[d]
+    catch e
+      console.log 'error',e if debug
     fn('ok')
-.on 'disconnect', (socket)->
-  socket.get 'session', (e,d)->
-    socket.leave(d)
 
 server.listen(process.argv[2])
