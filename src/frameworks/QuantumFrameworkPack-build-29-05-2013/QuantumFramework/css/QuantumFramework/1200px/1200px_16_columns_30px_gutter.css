@@ -1,0 +1,285 @@
+/*
+* Quantum Framework
+*
+* 1200px - 16 Columns - 30px Gutter
+*
+* Copyright 2013 Quantum Outsourcing, Inc
+* Licensed under the Apache License v2.0
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Designed and built by Quantum Outsourcing
+* http://QuantumOutsourcing.com
+*
+*/
+
+
+/* ==========================================================================
+   960px - 16 columns - 20px gutter 
+   ========================================================================== */
+
+   /* Container */ 
+   .container-16 { width: 960px; margin: 0 auto; } 
+
+   /* Global */ 
+   [class*="grid-"] { float: left; display: inline; margin-left: 10px; margin-right: 10px; } 
+   .group:before, .group:after { content: ""; display: table; line-height: 0; } 
+   .group:after { clear: both; } 
+
+   /* Nested elements */ 
+   .alpha { margin-left: 0px; } 
+   .omega { margin-right: 0px; } 
+
+   /* Grids */ 
+   .container-16 .grid-1 {  width: 40px; }
+   .container-16 .grid-2 {  width: 100px; }
+   .container-16 .grid-3 {  width: 160px; }
+   .container-16 .grid-4 {  width: 220px; }
+   .container-16 .grid-5 {  width: 280px; }
+   .container-16 .grid-6 {  width: 340px; }
+   .container-16 .grid-7 {  width: 400px; }
+   .container-16 .grid-8 {  width: 460px; }
+   .container-16 .grid-9 {  width: 520px; }
+   .container-16 .grid-10 {  width: 580px; }
+   .container-16 .grid-11 {  width: 640px; }
+   .container-16 .grid-12 {  width: 700px; }
+   .container-16 .grid-13 {  width: 760px; }
+   .container-16 .grid-14 {  width: 820px; }
+   .container-16 .grid-15 {  width: 880px; }
+   .container-16 .grid-16 {  width: 940px; }
+
+   /* Offset Extra Space */ 
+   .container-16 .offset-1 { padding-left: 60px; }
+   .container-16 .offset-2 { padding-left: 120px; }
+   .container-16 .offset-3 { padding-left: 180px; }
+   .container-16 .offset-4 { padding-left: 240px; }
+   .container-16 .offset-5 { padding-left: 300px; }
+   .container-16 .offset-6 { padding-left: 360px; }
+   .container-16 .offset-7 { padding-left: 420px; }
+   .container-16 .offset-8 { padding-left: 480px; }
+   .container-16 .offset-9 { padding-left: 540px; }
+   .container-16 .offset-10 { padding-left: 600px; }
+   .container-16 .offset-11 { padding-left: 660px; }
+   .container-16 .offset-12 { padding-left: 720px; }
+   .container-16 .offset-13 { padding-left: 780px; }
+   .container-16 .offset-14 { padding-left: 840px; }
+   .container-16 .offset-15 { padding-left: 900px; }
+
+/* ==========================================================================
+   1200px - 16 columns - 30px gutter 
+   ========================================================================== */
+
+   @media (min-width: 1200px) { 
+
+   /* Container */ 
+   .container-16 { width: 1200px; margin: 0 auto; } 
+
+   /* Global */ 
+   [class*="grid-"] { float: left; display: inline; margin-left: 15px; margin-right: 15px; } 
+   .group:before, .group:after { content: ""; display: table; line-height: 0; } 
+   .group:after { clear: both; } 
+
+   /* Nested elements */ 
+   .alpha { margin-left: 0px; } 
+   .omega { margin-right: 0px; } 
+
+   /* Grids */ 
+   .container-16 .grid-1 {  width: 45px; }
+   .container-16 .grid-2 {  width: 120px; }
+   .container-16 .grid-3 {  width: 195px; }
+   .container-16 .grid-4 {  width: 270px; }
+   .container-16 .grid-5 {  width: 345px; }
+   .container-16 .grid-6 {  width: 420px; }
+   .container-16 .grid-7 {  width: 495px; }
+   .container-16 .grid-8 {  width: 570px; }
+   .container-16 .grid-9 {  width: 645px; }
+   .container-16 .grid-10 {  width: 720px; }
+   .container-16 .grid-11 {  width: 795px; }
+   .container-16 .grid-12 {  width: 870px; }
+   .container-16 .grid-13 {  width: 945px; }
+   .container-16 .grid-14 {  width: 1020px; }
+   .container-16 .grid-15 {  width: 1095px; }
+   .container-16 .grid-16 {  width: 1170px; }
+
+   /* Offset Extra Space */ 
+   .container-16 .offset-1 { padding-left: 75px; }
+   .container-16 .offset-2 { padding-left: 150px; }
+   .container-16 .offset-3 { padding-left: 225px; }
+   .container-16 .offset-4 { padding-left: 300px; }
+   .container-16 .offset-5 { padding-left: 375px; }
+   .container-16 .offset-6 { padding-left: 450px; }
+   .container-16 .offset-7 { padding-left: 525px; }
+   .container-16 .offset-8 { padding-left: 600px; }
+   .container-16 .offset-9 { padding-left: 675px; }
+   .container-16 .offset-10 { padding-left: 750px; }
+   .container-16 .offset-11 { padding-left: 825px; }
+   .container-16 .offset-12 { padding-left: 900px; }
+   .container-16 .offset-13 { padding-left: 975px; }
+   .container-16 .offset-14 { padding-left: 1050px; }
+   .container-16 .offset-15 { padding-left: 1125px; }
+
+   }
+
+/* ==========================================================================
+   1008px - 16 columns - 20px gutter 
+   ========================================================================== */
+
+   @media (min-width: 1008px) and (max-width: 1199px) { 
+
+   /* Container */ 
+   .container-16 { width: 1008px; margin: 0 auto; } 
+
+   /* Global */ 
+   [class*="grid-"] { float: left; display: inline; margin-left: 10px; margin-right: 10px; } 
+   .group:before, .group:after { content: ""; display: table; line-height: 0; } 
+   .group:after { clear: both; } 
+
+   /* Nested elements */ 
+   .alpha { margin-left: 0px; } 
+   .omega { margin-right: 0px; } 
+
+   /* Grids */ 
+   .container-16 .grid-1 {  width: 43px; }
+   .container-16 .grid-2 {  width: 106px; }
+   .container-16 .grid-3 {  width: 169px; }
+   .container-16 .grid-4 {  width: 232px; }
+   .container-16 .grid-5 {  width: 295px; }
+   .container-16 .grid-6 {  width: 358px; }
+   .container-16 .grid-7 {  width: 421px; }
+   .container-16 .grid-8 {  width: 484px; }
+   .container-16 .grid-9 {  width: 547px; }
+   .container-16 .grid-10 {  width: 610px; }
+   .container-16 .grid-11 {  width: 673px; }
+   .container-16 .grid-12 {  width: 736px; }
+   .container-16 .grid-13 {  width: 799px; }
+   .container-16 .grid-14 {  width: 862px; }
+   .container-16 .grid-15 {  width: 925px; }
+   .container-16 .grid-16 {  width: 988px; }
+
+   /* Offset Extra Space */ 
+   .container-16 .offset-1 { padding-left: 63px; }
+   .container-16 .offset-2 { padding-left: 126px; }
+   .container-16 .offset-3 { padding-left: 189px; }
+   .container-16 .offset-4 { padding-left: 252px; }
+   .container-16 .offset-5 { padding-left: 315px; }
+   .container-16 .offset-6 { padding-left: 378px; }
+   .container-16 .offset-7 { padding-left: 441px; }
+   .container-16 .offset-8 { padding-left: 504px; }
+   .container-16 .offset-9 { padding-left: 567px; }
+   .container-16 .offset-10 { padding-left: 630px; }
+   .container-16 .offset-11 { padding-left: 693px; }
+   .container-16 .offset-12 { padding-left: 756px; }
+   .container-16 .offset-13 { padding-left: 819px; }
+   .container-16 .offset-14 { padding-left: 882px; }
+   .container-16 .offset-15 { padding-left: 945px; }
+
+   }
+
+/* ==========================================================================
+   768px - 16 columns - 20px gutter 
+   ========================================================================== */
+
+   @media (min-width: 768px) and (max-width: 959px) { 
+
+   /* Container */ 
+   .container-16 { width: 768px; margin: 0 auto; } 
+
+   /* Global */ 
+   [class*="grid-"] { float: left; display: inline; margin-left: 10px; margin-right: 10px; } 
+   .group:before, .group:after { content: ""; display: table; line-height: 0; } 
+   .group:after { clear: both; } 
+
+   /* Nested elements */ 
+   .alpha { margin-left: 0px; } 
+   .omega { margin-right: 0px; } 
+
+   /* Grids */ 
+   .container-16 .grid-1 {  width: 28px; }
+   .container-16 .grid-2 {  width: 76px; }
+   .container-16 .grid-3 {  width: 124px; }
+   .container-16 .grid-4 {  width: 172px; }
+   .container-16 .grid-5 {  width: 220px; }
+   .container-16 .grid-6 {  width: 268px; }
+   .container-16 .grid-7 {  width: 316px; }
+   .container-16 .grid-8 {  width: 364px; }
+   .container-16 .grid-9 {  width: 412px; }
+   .container-16 .grid-10 {  width: 460px; }
+   .container-16 .grid-11 {  width: 508px; }
+   .container-16 .grid-12 {  width: 556px; }
+   .container-16 .grid-13 {  width: 604px; }
+   .container-16 .grid-14 {  width: 652px; }
+   .container-16 .grid-15 {  width: 700px; }
+   .container-16 .grid-16 {  width: 748px; }
+
+   /* Offset Extra Space */ 
+   .container-16 .offset-1 { padding-left: 48px; }
+   .container-16 .offset-2 { padding-left: 96px; }
+   .container-16 .offset-3 { padding-left: 144px; }
+   .container-16 .offset-4 { padding-left: 192px; }
+   .container-16 .offset-5 { padding-left: 240px; }
+   .container-16 .offset-6 { padding-left: 288px; }
+   .container-16 .offset-7 { padding-left: 336px; }
+   .container-16 .offset-8 { padding-left: 384px; }
+   .container-16 .offset-9 { padding-left: 432px; }
+   .container-16 .offset-10 { padding-left: 480px; }
+   .container-16 .offset-11 { padding-left: 528px; }
+   .container-16 .offset-12 { padding-left: 576px; }
+   .container-16 .offset-13 { padding-left: 624px; }
+   .container-16 .offset-14 { padding-left: 672px; }
+   .container-16 .offset-15 { padding-left: 720px; }
+
+   }
+
+/* ==========================================================================
+   Mobile 
+   ========================================================================== */
+
+   @media only screen and (max-width: 767px) {
+
+   body { padding-left: 20px; padding-right: 20px; }
+
+   /* Container */
+   .container-16 { width: auto; }
+
+   /* Global */
+   [class*="grid-"] { display: block; margin-left: 0px; margin-right: 0px; }
+
+   /* Nested Elements */
+   .alpha { margin-left: 0px; }
+   .omega { margin-right: 0px; }
+
+   /* Grids */
+   .container-16 .grid-1,
+   .container-16 .grid-2,
+   .container-16 .grid-3,
+   .container-16 .grid-4,
+   .container-16 .grid-5,
+   .container-16 .grid-6,
+   .container-16 .grid-7,
+   .container-16 .grid-8,
+   .container-16 .grid-9,
+   .container-16 .grid-10,
+   .container-16 .grid-11,
+   .container-16 .grid-12,
+   .container-16 .grid-13,
+   .container-16 .grid-14,
+   .container-16 .grid-15,
+   .container-16 .grid-16 { width: 100%; }
+
+   /* Offset Extra Space */
+   .container-16 .offset-1, 
+   .container-16 .offset-2, 
+   .container-16 .offset-3, 
+   .container-16 .offset-4, 
+   .container-16 .offset-5, 
+   .container-16 .offset-6, 
+   .container-16 .offset-7, 
+   .container-16 .offset-8, 
+   .container-16 .offset-9, 
+   .container-16 .offset-10, 
+   .container-16 .offset-11, 
+   .container-16 .offset-12, 
+   .container-16 .offset-13, 
+   .container-16 .offset-14, 
+   .container-16 .offset-15 { padding-left: 0; }
+
+   }

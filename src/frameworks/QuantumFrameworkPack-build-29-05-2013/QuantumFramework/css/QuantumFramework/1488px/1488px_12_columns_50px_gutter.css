@@ -1,0 +1,292 @@
+/*
+* Quantum Framework
+*
+* 1488px - 12 Columns - 50px Gutter
+*
+* Copyright 2013 Quantum Outsourcing, Inc
+* Licensed under the Apache License v2.0
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Designed and built by Quantum Outsourcing
+* http://QuantumOutsourcing.com
+*
+*/
+
+
+/* ==========================================================================
+   960px - 12 columns - 20px gutter 
+   ========================================================================== */
+
+   /* Container */ 
+   .container-12 { width: 960px; margin: 0 auto; } 
+
+   /* Global */ 
+   [class*="grid-"] { float: left; display: inline; margin-left: 10px; margin-right: 10px; } 
+   .group:before, .group:after { content: ""; display: table; line-height: 0; } 
+   .group:after { clear: both; } 
+
+   /* Nested elements */ 
+   .alpha { margin-left: 0px; } 
+   .omega { margin-right: 0px; } 
+
+   /* Grids */ 
+   .container-12 .grid-1 {  width: 60px; }
+   .container-12 .grid-2 {  width: 140px; }
+   .container-12 .grid-3 {  width: 220px; }
+   .container-12 .grid-4 {  width: 300px; }
+   .container-12 .grid-5 {  width: 380px; }
+   .container-12 .grid-6 {  width: 460px; }
+   .container-12 .grid-7 {  width: 540px; }
+   .container-12 .grid-8 {  width: 620px; }
+   .container-12 .grid-9 {  width: 700px; }
+   .container-12 .grid-10 {  width: 780px; }
+   .container-12 .grid-11 {  width: 860px; }
+   .container-12 .grid-12 {  width: 940px; }
+
+   /* Offset Extra Space */ 
+   .container-12 .offset-1 { padding-left: 80px; }
+   .container-12 .offset-2 { padding-left: 160px; }
+   .container-12 .offset-3 { padding-left: 240px; }
+   .container-12 .offset-4 { padding-left: 320px; }
+   .container-12 .offset-5 { padding-left: 400px; }
+   .container-12 .offset-6 { padding-left: 480px; }
+   .container-12 .offset-7 { padding-left: 560px; }
+   .container-12 .offset-8 { padding-left: 640px; }
+   .container-12 .offset-9 { padding-left: 720px; }
+   .container-12 .offset-10 { padding-left: 800px; }
+   .container-12 .offset-11 { padding-left: 880px; }
+
+/* ==========================================================================
+   1488px - 12 columns - 50px gutter 
+   ========================================================================== */
+
+   @media (min-width: 1488px) { 
+
+   /* Container */ 
+   .container-12 { width: 1488px; margin: 0 auto; } 
+
+   /* Global */ 
+   [class*="grid-"] { float: left; display: inline; margin-left: 25px; margin-right: 25px; } 
+   .group:before, .group:after { content: ""; display: table; line-height: 0; } 
+   .group:after { clear: both; } 
+
+   /* Nested elements */ 
+   .alpha { margin-left: 0px; } 
+   .omega { margin-right: 0px; } 
+
+   /* Grids */ 
+   .container-12 .grid-1 {  width: 74px; }
+   .container-12 .grid-2 {  width: 198px; }
+   .container-12 .grid-3 {  width: 322px; }
+   .container-12 .grid-4 {  width: 446px; }
+   .container-12 .grid-5 {  width: 570px; }
+   .container-12 .grid-6 {  width: 694px; }
+   .container-12 .grid-7 {  width: 818px; }
+   .container-12 .grid-8 {  width: 942px; }
+   .container-12 .grid-9 {  width: 1066px; }
+   .container-12 .grid-10 {  width: 1190px; }
+   .container-12 .grid-11 {  width: 1314px; }
+   .container-12 .grid-12 {  width: 1438px; }
+
+   /* Offset Extra Space */ 
+   .container-12 .offset-1 { padding-left: 124px; }
+   .container-12 .offset-2 { padding-left: 248px; }
+   .container-12 .offset-3 { padding-left: 372px; }
+   .container-12 .offset-4 { padding-left: 496px; }
+   .container-12 .offset-5 { padding-left: 620px; }
+   .container-12 .offset-6 { padding-left: 744px; }
+   .container-12 .offset-7 { padding-left: 868px; }
+   .container-12 .offset-8 { padding-left: 992px; }
+   .container-12 .offset-9 { padding-left: 1116px; }
+   .container-12 .offset-10 { padding-left: 1240px; }
+   .container-12 .offset-11 { padding-left: 1364px; }
+
+   }
+
+/* ==========================================================================
+   1296px - 12 columns - 40px gutter 
+   ========================================================================== */
+
+   @media (min-width: 1296px) and (max-width: 1487px) { 
+
+   /* Container */ 
+   .container-12 { width: 1296px; margin: 0 auto; } 
+
+   /* Global */ 
+   [class*="grid-"] { float: left; display: inline; margin-left: 20px; margin-right: 20px; } 
+   .group:before, .group:after { content: ""; display: table; line-height: 0; } 
+   .group:after { clear: both; } 
+
+   /* Nested elements */ 
+   .alpha { margin-left: 0px; } 
+   .omega { margin-right: 0px; } 
+
+   /* Grids */ 
+   .container-12 .grid-1 {  width: 68px; }
+   .container-12 .grid-2 {  width: 176px; }
+   .container-12 .grid-3 {  width: 284px; }
+   .container-12 .grid-4 {  width: 392px; }
+   .container-12 .grid-5 {  width: 500px; }
+   .container-12 .grid-6 {  width: 608px; }
+   .container-12 .grid-7 {  width: 716px; }
+   .container-12 .grid-8 {  width: 824px; }
+   .container-12 .grid-9 {  width: 932px; }
+   .container-12 .grid-10 {  width: 1040px; }
+   .container-12 .grid-11 {  width: 1148px; }
+   .container-12 .grid-12 {  width: 1256px; }
+
+   /* Offset Extra Space */ 
+   .container-12 .offset-1 { padding-left: 108px; }
+   .container-12 .offset-2 { padding-left: 216px; }
+   .container-12 .offset-3 { padding-left: 324px; }
+   .container-12 .offset-4 { padding-left: 432px; }
+   .container-12 .offset-5 { padding-left: 540px; }
+   .container-12 .offset-6 { padding-left: 648px; }
+   .container-12 .offset-7 { padding-left: 756px; }
+   .container-12 .offset-8 { padding-left: 864px; }
+   .container-12 .offset-9 { padding-left: 972px; }
+   .container-12 .offset-10 { padding-left: 1080px; }
+   .container-12 .offset-11 { padding-left: 1188px; }
+
+   }
+
+/* ==========================================================================
+   1104px - 12 columns - 30px gutter 
+   ========================================================================== */
+
+   @media (min-width: 1104px) and (max-width: 1295px) { 
+
+   /* Container */ 
+   .container-12 { width: 1104px; margin: 0 auto; } 
+
+   /* Global */ 
+   [class*="grid-"] { float: left; display: inline; margin-left: 15px; margin-right: 15px; } 
+   .group:before, .group:after { content: ""; display: table; line-height: 0; } 
+   .group:after { clear: both; } 
+
+   /* Nested elements */ 
+   .alpha { margin-left: 0px; } 
+   .omega { margin-right: 0px; } 
+
+   /* Grids */ 
+   .container-12 .grid-1 {  width: 62px; }
+   .container-12 .grid-2 {  width: 154px; }
+   .container-12 .grid-3 {  width: 246px; }
+   .container-12 .grid-4 {  width: 338px; }
+   .container-12 .grid-5 {  width: 430px; }
+   .container-12 .grid-6 {  width: 522px; }
+   .container-12 .grid-7 {  width: 614px; }
+   .container-12 .grid-8 {  width: 706px; }
+   .container-12 .grid-9 {  width: 798px; }
+   .container-12 .grid-10 {  width: 890px; }
+   .container-12 .grid-11 {  width: 982px; }
+   .container-12 .grid-12 {  width: 1074px; }
+
+   /* Offset Extra Space */ 
+   .container-12 .offset-1 { padding-left: 92px; }
+   .container-12 .offset-2 { padding-left: 184px; }
+   .container-12 .offset-3 { padding-left: 276px; }
+   .container-12 .offset-4 { padding-left: 368px; }
+   .container-12 .offset-5 { padding-left: 460px; }
+   .container-12 .offset-6 { padding-left: 552px; }
+   .container-12 .offset-7 { padding-left: 644px; }
+   .container-12 .offset-8 { padding-left: 736px; }
+   .container-12 .offset-9 { padding-left: 828px; }
+   .container-12 .offset-10 { padding-left: 920px; }
+   .container-12 .offset-11 { padding-left: 1012px; }
+
+   }
+
+/* ==========================================================================
+   768px - 12 columns - 20px gutter 
+   ========================================================================== */
+
+   @media (min-width: 768px) and (max-width: 959px) { 
+
+   /* Container */ 
+   .container-12 { width: 768px; margin: 0 auto; } 
+
+   /* Global */ 
+   [class*="grid-"] { float: left; display: inline; margin-left: 10px; margin-right: 10px; } 
+   .group:before, .group:after { content: ""; display: table; line-height: 0; } 
+   .group:after { clear: both; } 
+
+   /* Nested elements */ 
+   .alpha { margin-left: 0px; } 
+   .omega { margin-right: 0px; } 
+
+   /* Grids */ 
+   .container-12 .grid-1 {  width: 44px; }
+   .container-12 .grid-2 {  width: 108px; }
+   .container-12 .grid-3 {  width: 172px; }
+   .container-12 .grid-4 {  width: 236px; }
+   .container-12 .grid-5 {  width: 300px; }
+   .container-12 .grid-6 {  width: 364px; }
+   .container-12 .grid-7 {  width: 428px; }
+   .container-12 .grid-8 {  width: 492px; }
+   .container-12 .grid-9 {  width: 556px; }
+   .container-12 .grid-10 {  width: 620px; }
+   .container-12 .grid-11 {  width: 684px; }
+   .container-12 .grid-12 {  width: 748px; }
+
+   /* Offset Extra Space */ 
+   .container-12 .offset-1 { padding-left: 64px; }
+   .container-12 .offset-2 { padding-left: 128px; }
+   .container-12 .offset-3 { padding-left: 192px; }
+   .container-12 .offset-4 { padding-left: 256px; }
+   .container-12 .offset-5 { padding-left: 320px; }
+   .container-12 .offset-6 { padding-left: 384px; }
+   .container-12 .offset-7 { padding-left: 448px; }
+   .container-12 .offset-8 { padding-left: 512px; }
+   .container-12 .offset-9 { padding-left: 576px; }
+   .container-12 .offset-10 { padding-left: 640px; }
+   .container-12 .offset-11 { padding-left: 704px; }
+
+   }
+
+/* ==========================================================================
+   Mobile 
+   ========================================================================== */
+
+   @media only screen and (max-width: 767px) {
+
+   body { padding-left: 20px; padding-right: 20px; }
+
+   /* Container */
+   .container-12 { width: auto; }
+
+   /* Global */
+   [class*="grid-"] { display: block; margin-left: 0px; margin-right: 0px; }
+
+   /* Nested Elements */
+   .alpha { margin-left: 0px; }
+   .omega { margin-right: 0px; }
+
+   /* Grids */
+   .container-12 .grid-1,
+   .container-12 .grid-2,
+   .container-12 .grid-3,
+   .container-12 .grid-4,
+   .container-12 .grid-5,
+   .container-12 .grid-6,
+   .container-12 .grid-7,
+   .container-12 .grid-8,
+   .container-12 .grid-9,
+   .container-12 .grid-10,
+   .container-12 .grid-11,
+   .container-12 .grid-12 { width: 100%; }
+
+   /* Offset Extra Space */
+   .container-12 .offset-1, 
+   .container-12 .offset-2, 
+   .container-12 .offset-3, 
+   .container-12 .offset-4, 
+   .container-12 .offset-5, 
+   .container-12 .offset-6, 
+   .container-12 .offset-7, 
+   .container-12 .offset-8, 
+   .container-12 .offset-9, 
+   .container-12 .offset-10, 
+   .container-12 .offset-11 { padding-left: 0; }
+
+   }
