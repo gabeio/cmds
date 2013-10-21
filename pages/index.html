@@ -21,40 +21,42 @@
     <!-- monokai theme -->
     <link rel="stylesheet" href="/src/cm/theme/monokai.css">
     <!-- vim like editing -->
-	<script src="/src/cm/keymap/vim.js"></script>
-	<!-- htmlmixed -->
-	<script src="/src/cm/mode/htmlmixed/htmlmixed.js"></script>
-	<script src="/src/cm/mode/htmlembedded/htmlembedded.js"></script>
-	<script src="/src/cm/addon/fold/foldcode.js"></script>
-	<script src="/src/cm/addon/fold/foldgutter.js"></script>
-	<script src="/src/cm/addon/fold/brace-fold.js"></script>
-	<script src="/src/cm/addon/fold/comment-fold.js"></script>
-	<script src="/src/cm/mode/xml/xml.js"></script>
-	<script src="/src/cm/mode/css/css.js"></script>
-	<script src="/src/cm/mode/javascript/javascript.js"></script>
-	<script src="/src/cm/mode/coffeescript/coffeescript.js"></script>
-	<style>
-	  .top-bar{color:white;}
-	  .CodeMirror {
-	    position:absolute;
-	    top:45px;
-	    bottom:0;
-	    width:100%;
-	    height:100%;
-	    overflow-x:hidden;
-	  }
-	</style>
-	<!-- END CODEMIRROR -->
-	<script src="/src/cmds-cli.js"></script><!-- cmds -->
+    <script src="/src/cm/keymap/vim.js"></script>
+    <!-- htmlmixed -->
+    <script src="/src/cm/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="/src/cm/mode/htmlembedded/htmlembedded.js"></script>
+    <script src="/src/cm/addon/fold/foldcode.js"></script>
+    <script src="/src/cm/addon/fold/foldgutter.js"></script>
+    <script src="/src/cm/addon/fold/brace-fold.js"></script>
+    <script src="/src/cm/addon/fold/comment-fold.js"></script>
+    <script src="/src/cm/mode/xml/xml.js"></script>
+    <script src="/src/cm/mode/css/css.js"></script>
+    <script src="/src/cm/mode/javascript/javascript.js"></script>
+    <script src="/src/cm/mode/coffeescript/coffeescript.js"></script>
+    <style>
+    .top-bar{color:white;}
+    .CodeMirror {
+      position:absolute;
+      top:45px;
+      bottom:0;
+      width:100%;
+      height:100%;
+      overflow-x:hidden;
+    }
+    </style>
+    <!-- END CODEMIRROR -->
+    <script src="/src/cmds-cli.js"></script><!-- cmds -->
   </head>
   <body>
     <div id="menu" class="fixed top-bar" style="position:fixed !important;">
       <div class="left"><a href="/view" id="viewLINK" target="new">View ID: <span id="viewID"></span></a></div>
       <div class="left">
+        Framework:
         <select style="visibility:hidden;" id="frmwk">
           <option value="bts3">bootstrap3</option>
           <option value="fdn4">foundation4</option>
         </select>
+        <button id="pushfrmwk" title="updates are made automatically on change unless a new client connects.">Push</button>
       </div>
 	</div>
 	<textarea id="code" class="code" style="width:100%;position:absolute;top:45px;bottom:0px;"></textarea>
